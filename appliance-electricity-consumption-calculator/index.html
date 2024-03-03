@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Appliance Electricity Consumption Calculator</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="calculator-container">
+            <h3 class="text-center">Daily Appliance Electricity Consumption Calculator</h3>
+            <form onsubmit="calculateElectricity(event)">
+                <div class="form-group row">
+                    <label for="applianceName" class="col-4 col-form-label">Appliance Name:</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="applianceName" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="appliancePower" class="col-4 col-form-label">Appliance Power:</label>
+                    <div class="col-3">
+                        <input type="number" class="form-control" id="appliancePower" required>
+                    </div>
+                    <div class="col-5">
+                        <select class="custom-select" id="powerUnit">
+                            <option value="w">watt (W)</option>
+                            <option value="kw">kilowatt (kW)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="usage" class="col-4 col-form-label">Usage:</label>
+                    <div class="col-3">
+                        <input type="number" class="form-control" id="usage" required>
+                    </div>
+                    <div class="col-5">
+                        <select class="custom-select" id="usageUnit">
+                            <option value="hpDay">hours per day</option>
+                            <option value="mpDay">minutes per day</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="electricityPrice" class="col-4 col-form-label">Electricity Price:</label>
+                    <div class="col-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">$</div>
+                            </div>
+                            <input type="text" class="form-control" id="electricityPrice">
+                        </div>
+                    </div>
+                    <label class="col-4 col-form-label">per kWh</label>
+                </div>
+                <div class="form-group row">
+                    <button type="reset" class="btn btn-danger col-5 mr-auto ml-4">Clear</button>
+                    <button type="submit" class="btn btn-dark col-5 ml-auto mr-4">Calculate</button>
+                </div>
+            </form>
+
+            <div class="result" style="display: none;">
+                <h4>Result:</h4>
+                <p id="resultMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>

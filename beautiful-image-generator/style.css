@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/10/pier-beautiful-silent-view-4k_1540134105.jpg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 700px;
+    border: 2px solid;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+.image-container img {
+    width: 550px;
+}
+
+#download-button {
+    background-color: rgb(90, 90, 90);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#generate-button {
+    background-color: rgb(90, 90, 90);
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#generate-button:hover {
+    color: rgb(20, 20, 20);
+    background-color: rgb(240, 240, 240);
+}
